@@ -20,7 +20,7 @@ Figure 2.3
 
 The code to perform error handling of user inputs for the shopping cart occurs in the def_input_shopping_cart_items function (Figure 2.4/Listing 1). For the item name input, two custom exceptions are raised for when the user enters numbers instead of letters and when there is a blank entry (lines 129 to 132). A custom exception is created for each case, because there is not a specific Python exception type. Nonetheless these entries are undesirable and cannot be included in the receipt. For the cost input, the input is float type, so when letters are entered instead it would cause a ValueError, a specific Exception type. As a result, this error can be handled using the except clause with ValueError, instead of raising a custom Exception.
 
-```
+```python
 @staticmethod
     def input_shopping_cart_items(item='', cost=0):
         """ User inputs an item and its cost into a list/table of data. Error handling controls the
@@ -62,7 +62,7 @@ Figure 3.2
 
 Figure 3.3 shows what the main program looks like when option 2 from the menu is selected. 
 
-```
+```python
     elif choice_str == '2':
         print('Total number of items in the cart is:', Processor.total_items(list_of_rows=table_lst))
         print('Total cost in the cart:', Processor.total_cost(list_of_rows=table_lst))
@@ -78,7 +78,7 @@ Figure 3.3 shows what the main program looks like when option 2 from the menu is
 
 In order to performing pickling and unpickling, the pickle module must be imported first into the file. This allows the various functions of the modules to be used within the script. The specific functions for performing the pickling and unpickling occurs in the Processor class (Figure 3.4). Pickling data function requires two parameters: the name of the binary file where the data will be saved and the list of data. As seen in Figure 3.4, in lines 66-67, when these arguments are passed in, the file is opened using the keyword “wb” for write binary, and the table of data is “dumped” into the file via the pickle.dump() function. The with keyboard opens and closes the file. To retrieve the data, one opens the file where the data is stored, using the keyword “rb” for reading binary, and use the pickle.load function. The list of data is captured via the local variable, shopping_list (lines 76-77).
 
-```
+```python
 @staticmethod
     def pickling_list(file_name, list_of_rows):
         """ Pickles the list of data into a new binary file
@@ -105,7 +105,7 @@ In order to performing pickling and unpickling, the pickle module must be import
 
 In the main program, the unpickling_list custom function returns a list that is captured by the global variable, table_list (Figure 3.3, line 197) and the list is printed into the receipt table at the start of the while loop (Figure 3.5, line 172). I specifically saved all the data into a single table, because the pickle functions can only load and unload one list at a time. So in order to avoid confusion on the number of dump and load functions that has to be written to access all the data, one single list was created to capture that information. 
 
-```
+```python
 while True:
     IO.print_current_items_in_list(list_of_rows=table_lst)  # Show current data
     IO.print_menu_options()  # Display a menu of choices to the user
