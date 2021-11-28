@@ -1,5 +1,5 @@
 # Error Handling & Pickling Code Demonstration
-**Dev:** *Cli*  
+**Dev:** *CLi*  
 **Date:** *11.27.2021*
 
 ## 1. Introduction
