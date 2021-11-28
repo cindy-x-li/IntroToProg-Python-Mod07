@@ -10,7 +10,7 @@ When creating a program with user interactions, there are often times where the 
 
 The shopping cart price calculator program uses error handling to evaluate the user’s input of the shopping item and its cost prior to adding it to the table of data, also known as the receipt. First, let’s look at the case where the user successfully enters the name of an item and its cost via prompts in Figure 2.1 and then the receipt is generated in Figure 2.2 with the entries.
 
-![Figure 2.1](https://github.com/cindy-x-li/IntroToProg-Python-Mod07/blob/main/docs/images/Fig2-1.png "Figure 2.1")
+![Figure 2.1](https://cindy-x-li.github.io/IntroToProg-Python-Mod07/docs/images/Fig2-1.png "Figure 2.1")
 #### Figure 2.1: Entering inputs into the program
 
 ![Figure 2.2](https://github.com/cindy-x-li/IntroToProg-Python-Mod07/blob/main/docs/images/Fig2-2.png "Figure 2.2") 
